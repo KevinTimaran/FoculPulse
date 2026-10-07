@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FocusPulse ⌚️
 
-## Getting Started
+FocusPulse is an interactive smartwatch simulator tailored for a Xiaomi Smart Band 7 form factor. It uses the `dickwu/apple-design-skill` guidelines to deliver a premium OLED interface (Apple HIG) combined with a "Wizard of Oz" external control panel for real-time demonstrations.
 
-First, run the development server:
+Built with **Next.js**, **React Context**, **Tailwind CSS**, and **Lucide Icons**.
 
+## 🚀 Instalación Rápida (1 Clic)
+
+Se han incluido scripts para configurar y levantar el proyecto automáticamente en cualquier computadora nueva sin configuraciones manuales:
+
+1. Clona este repositorio en tu computadora local:
+   ```bash
+   git clone git@github.com:KevinTimaran/FoculPulse.git
+   ```
+
+2. Entra en la carpeta del proyecto. Dependiendo de tu sistema operativo, ejecuta el script correspondiente:
+
+### Para Windows
+Simplemente dale **doble clic** al archivo `setup.bat` desde el explorador de archivos. 
+El script verificará que tengas Node.js instalado, instalará todas las dependencias y levantará el servidor en un solo paso.
+
+### Para macOS y Linux
+Abre una terminal en la carpeta del proyecto y ejecuta el script:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+./setup.sh
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> **Nota:** Si el sistema te indica permisos insuficientes, otorga primero permisos de ejecución ejecutando: `chmod +x setup.sh`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎮 ¿Cómo utilizar el simulador?
 
-## Learn More
+Una vez levantado el servidor (disponible en `http://localhost:3000`), la pantalla principal se dividirá en dos componentes interactivos:
 
-To learn more about Next.js, take a look at the following resources:
+1. **El Reloj Inteligente (Izquierda):**
+   - Una interfaz que reacciona a los eventos externos. Puedes interactuar directamente presionando el botón "Play", y alternar entre los distintos modos de la aplicación (Idle, Active, History, Summary).
+   - Incluye un interruptor de "Tema Claro/Oscuro" (Sun/Moon icon) en la vista principal.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Panel de Control "Wizard of Oz" (Derecha):**
+   - **Heart Rate:** Desliza la barra para alterar en tiempo real el ritmo cardíaco de las pulsaciones que aparecen dentro del reloj.
+   - **Concentration:** Presiona High, Medium o Low para cambiar visualmente el anillo de energía (color) del reloj de forma fluida.
+   - **Triggers:** Usa el botón de **Force Distraction Event** para interrumpir de manera abrupta la sesión y disparar la alerta de desconcentración en la pantalla del reloj de inmediato.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Este proyecto fue generado y automatizado con Antigravity IDE.*
